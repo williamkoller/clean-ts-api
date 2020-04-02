@@ -23,7 +23,6 @@
     "git-commit-msg-linter": "^2.4.2",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "lint-staged": "^10.0.8",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
   },
@@ -34,5 +33,8 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "lint-staged": "^10.1.1"
   }
 }
