@@ -207,7 +207,7 @@ describe('SignUp Controller', () => {
       body: {
         name: 'valid_name',
         email: 'valid_email@mail.com',
-        password: 'valid_password',
+        password: 'valid_passwor',
         passwordConfirmation: 'valid_password'
       }
     }
