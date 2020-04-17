@@ -5,9 +5,3 @@
 - [Nodejs Support - JS](https://node.green/)
  
 - [Standard JS](https://standardjs.com/rules.html)
-
-if error w\ git commit running command 
-
-```
-npx mrm lint-staged
-```
