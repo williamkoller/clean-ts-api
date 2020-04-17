@@ -39,5 +39,8 @@
   },
   "dependencies": {
     "validator": "^13.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
