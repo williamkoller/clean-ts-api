@@ -1,7 +1,7 @@
 {
   "name": "clean-node-api",
   "version": "1.1.0",
-  "description": "",
+  "description": "NodeJS Rest API using TDd, Clean Architecture and Typescript",
   "main": "index.js",
   "scripts": {
     "start": "node dist/main/server.js",
@@ -55,5 +55,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.6",
     "validator": "^13.0.0"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
