@@ -1,10 +1,14 @@
 {
   "name": "clean-node-api",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.2.0",
+  "description": "NodeJS Rest API using TDd, Clean Architecture and Typescript",
   "main": "index.js",
   "scripts": {
-    "start": "sucrase-node src/main/server.ts",
+    "start": "node dist/main/server.js",
+    "build": "rimraf dist && tsc",
+    "debug": "node --inspect=0.0.0.0:9222 --nolazy dist/main/server.js",
+    "up": "npm run build && docker-compose up -d",
+    "down": "docker-compose down",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
@@ -12,8 +16,7 @@
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   },
-  "keywords": [],
-  "author": "",
+  "author": "William Koller",
   "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.1.5",
@@ -35,8 +38,8 @@
     "git-commit-msg-linter": "^2.4.2",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "lint-staged": "^10.1.4",
-    "sucrase": "^3.13.0",
+    "lint-staged": "^10.0.0",
+    "rimraf": "^3.0.2",
     "supertest": "^4.0.2",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
@@ -50,9 +53,11 @@
   "dependencies": {
     "bcrypt": "^4.0.1",
     "express": "^4.17.1",
-    "fast-glob": "^3.2.2",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.6",
     "validator": "^13.0.0"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
