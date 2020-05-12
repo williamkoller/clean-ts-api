@@ -5,7 +5,7 @@ const makeFakeSurveyData = (): AddSurveyModel => ({
   question: 'any_question',
   answers: [{
     image: 'any_image',
-    answers: 'any_answers'
+    answer: 'any_answer'
   }]
 })
 
