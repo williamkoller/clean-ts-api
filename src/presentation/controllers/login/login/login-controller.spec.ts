@@ -20,6 +20,7 @@ const makeValidation = (): Validation => {
   }
   return new ValidationSub()
 }
+
 const makeFakeRequest = (): HttpRequest => ({
   body: {
     email: 'any_email@mail.com',

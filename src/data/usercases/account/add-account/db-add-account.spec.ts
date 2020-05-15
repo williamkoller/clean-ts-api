@@ -60,6 +60,7 @@ const makeSut = (): SubTypes => {
     loadAccountByEmailRepositoryStub
   }
 }
+
 describe('DbAccount UseCase', () => {
   test('Should call Hasher with correct password', async () => {
     const { sut, hasherStub } = makeSut()
