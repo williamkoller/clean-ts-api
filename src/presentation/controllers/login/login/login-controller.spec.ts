@@ -3,24 +3,6 @@ import { badRequest, serverError, unauthorized, ok } from '@/presentation/helper
 import { MissingParamError } from '@/presentation/errors'
 import { HttpRequest, Authentication, Validation, AuthenticationModel } from './login-controller-protocols'
 
-const makeAuthentication = (): Authentication => {
-  class AuthenticationStub implements Authentication {
-    async auth (autentication: AuthenticationModel): Promise<string> {
-      return await new Promise(resolve => resolve('any_token'))
-    }
-  }
-  return new AuthenticationStub()
-}
-
-const makeValidation = (): Validation => {
-  class ValidationSub implements Validation {
-    validate (input: any): Error {
-      return null
-    }
-  }
-  return new ValidationSub()
-}
-
 const makeFakeRequest = (): HttpRequest => ({
   body: {
     email: 'any_email@mail.com',
@@ -43,6 +25,24 @@ const makeSut = (): SutTypes => {
     authenticationStub,
     validationStub
   }
+}
+
+const makeAuthentication = (): Authentication => {
+  class AuthenticationStub implements Authentication {
+    async auth (autentication: AuthenticationModel): Promise<string> {
+      return await new Promise(resolve => resolve('any_token'))
+    }
+  }
+  return new AuthenticationStub()
+}
+
+const makeValidation = (): Validation => {
+  class ValidationSub implements Validation {
+    validate (input: any): Error {
+      return null
+    }
+  }
+  return new ValidationSub()
 }
 
 describe('Login Controller', () => {
