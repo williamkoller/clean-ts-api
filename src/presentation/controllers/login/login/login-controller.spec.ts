@@ -1,6 +1,6 @@
 import { LoginController } from './login-controller'
-import { badRequest, serverError, unauthorized, ok } from '../../../helpers/http/http-helper'
-import { MissingParamError } from '../../../errors'
+import { badRequest, serverError, unauthorized, ok } from '@/presentation/helpers/http/http-helper'
+import { MissingParamError } from '@/presentation/errors'
 import { HttpRequest, Authentication, Validation, AuthenticationModel } from './login-controller-protocols'
 
 const makeAuthentication = (): Authentication => {
@@ -20,6 +20,7 @@ const makeValidation = (): Validation => {
   }
   return new ValidationSub()
 }
+
 const makeFakeRequest = (): HttpRequest => ({
   body: {
     email: 'any_email@mail.com',
