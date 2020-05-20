@@ -41,7 +41,7 @@ const makeFakeAccountData = (): AddAccountModel => ({
   password: 'valid_password'
 })
 
-interface SubTypes {
+type SubTypes = {
   sut: DbAddAccount
   hasherStub: Hasher
   addAccountRepositoryStub: AddAccountRepository
