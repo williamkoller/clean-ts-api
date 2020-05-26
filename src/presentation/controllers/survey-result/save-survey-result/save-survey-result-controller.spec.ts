@@ -2,8 +2,9 @@ import { SaveSurveyResultController } from './save-survey-result-controller'
 import { HttpRequest, LoadSurveyById, SurveyModel, SaveSurveyResultParams, SurveyResultModel, SaveSurveyResult } from './save-survey-result-controller-protocols'
 import { forbidden, serverError, ok } from '@/presentation/helpers/http/http-helper'
 import { InvalidParamError } from '@/presentation/errors'
-import { throwError } from '@/domain/test'
+import { throwError, mockSurveyModel } from '@/domain/test'
 import MockDate from 'mockdate'
+
 const makeFakeRequest = (): HttpRequest => ({
   params: {
     surveyId: 'any_survey_id'
@@ -12,16 +13,6 @@ const makeFakeRequest = (): HttpRequest => ({
     answer: 'any_answer'
   },
   accountId: 'any_account_id'
-})
-
-const makeFakeSurvey = (): SurveyModel => ({
-  id: 'any_id',
-  question: 'any_question',
-  answers: [{
-    image: 'any_image',
-    answer: 'any_answer'
-  }],
-  date: new Date()
 })
 
 const makeFakeSurveyResult = (): SurveyResultModel => ({
@@ -35,7 +26,7 @@ const makeFakeSurveyResult = (): SurveyResultModel => ({
 const makeLoadSurveyById = (): LoadSurveyById => {
   class LoadSurveyByIdStub implements LoadSurveyById {
     async loadById (id: string): Promise<SurveyModel> {
-      return await new Promise(resolve => resolve(makeFakeSurvey()))
+      return await new Promise(resolve => resolve(mockSurveyModel()))
     }
   }
   return new LoadSurveyByIdStub()
