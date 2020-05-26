@@ -1,7 +1,7 @@
 {
   "name": "clean-node-api",
   "version": "2.2.0",
-  "description": "NodeJS Rest API using TDd, Clean Architecture and Typescript",
+  "description": "NodeJS Rest API using TDD, Clean Architecture and Typescript",
   "main": "index.js",
   "scripts": {
     "start": "node dist/main/server.js",
@@ -29,6 +29,7 @@
     "@types/mongodb": "^3.5.18",
     "@types/node": "^14.0.4",
     "@types/supertest": "^2.0.9",
+    "@types/swagger-ui-express": "^4.1.2",
     "@types/validator": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "coveralls": "^3.1.0",
@@ -61,6 +62,7 @@
     "module-alias": "^2.2.2",
     "mongodb": "^3.5.7",
     "nodemon": "^2.0.4",
+    "swagger-ui-express": "^4.1.4",
     "validator": "^13.0.0"
   },
   "engines": {
