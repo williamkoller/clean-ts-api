@@ -19,7 +19,7 @@
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info"
   },
   "author": "William Koller",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.1.5",
     "@types/bcrypt": "^3.0.0",
