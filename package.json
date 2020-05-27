@@ -1,6 +1,6 @@
 {
   "name": "clean-node-api",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "NodeJS Rest API using TDD, Clean Architecture and Typescript",
   "main": "index.js",
   "scripts": {
