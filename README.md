@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/williamkoller/clean-ts-api.svg?branch=master)](https://travis-ci.com/williamkoller/clean-ts-api)
 [![Coverage Status](https://coveralls.io/repos/github/williamkoller/clean-ts-api/badge.svg?branch=master)](https://coveralls.io/github/williamkoller/clean-ts-api?branch=master)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/williamkoller/clean-ts-api)
+[![Known Vulnerabilities](https://snyk.io/test/github/williamkoller/clean-ts-api/badge.svg)](https://snyk.io/test/github/williamkoller/clean-ts-api)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/williamkoller/clean-ts-api)
