@@ -41,6 +41,7 @@ describe('SaveSurveyResult Controller', () => {
   afterAll(() => {
     MockDate.reset()
   })
+
   test('Should call LoadSurveyById with correct values', async () => {
     const { sut, loadSurveyByIdStub } = makeSut()
     const loadByIdSpy = jest.spyOn(loadSurveyByIdStub, 'loadById')
