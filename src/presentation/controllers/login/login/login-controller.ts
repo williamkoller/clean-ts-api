@@ -1,4 +1,4 @@
-import { Controller, HttpResponse, HttpRequest, Authentication, Validation } from './login-controller-protocols'
+import { Controller, HttpRequest, HttpResponse, Authentication, Validation } from './login-controller-protocols'
 import { badRequest, serverError, unauthorized, ok } from '@/presentation/helpers/http/http-helper'
 
 export class LoginController implements Controller {
@@ -14,14 +14,14 @@ export class LoginController implements Controller {
         return badRequest(error)
       }
       const { email, password } = httpRequest.body
-      const accessToken = await this.authentication.auth({
+      const authenticationModel = await this.authentication.auth({
         email,
         password
       })
-      if (!accessToken) {
+      if (!authenticationModel) {
         return unauthorized()
       }
-      return ok({ accessToken })
+      return ok(authenticationModel)
     } catch (error) {
       return serverError(error)
     }
