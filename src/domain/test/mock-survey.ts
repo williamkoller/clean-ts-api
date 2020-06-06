@@ -1,4 +1,4 @@
-import { SurveyModel } from '@/domain/models/survey'
+import { SurveyModel } from '@/domain/models/survey/survey'
 import { AddSurveyParams } from '@/domain/usecases/survey/add-survey'
 import faker from 'faker'
 

@@ -2,7 +2,7 @@ import { SurveyMongoRepository } from './survey-mongo-repository'
 import { MongoHelper } from '../helpers/mongo-helper'
 import { mockAddSurveyParams, mockAddAccountParams } from '@/domain/test'
 import { Collection } from 'mongodb'
-import { AccountModel } from '@/domain/models/account'
+import { AccountModel } from '@/domain/models/account/account'
 
 let surveyCollection: Collection
 let surveyResultCollection: Collection
