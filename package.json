@@ -48,6 +48,7 @@
     "jest": "^26.0.1",
     "lint-staged": "^10.2.8",
     "mockdate": "^3.0.2",
+    "npm-check": "^5.9.2",
     "rimraf": "^3.0.2",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.0",
