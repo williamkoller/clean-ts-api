@@ -1,6 +1,6 @@
 import { HttpRequest } from '@/presentation/protocols'
 import { AddSurveyController } from './add-survey-controller'
-import { badRequest, serverError, noContent } from '@/presentation/helpers/http/http-helper'
+import { badRequest, serverError, ok } from '@/presentation/helpers/http/http-helper'
 import { ValidationSpy, AddSurveySpy } from '@/presentation/test'
 import { throwError } from '@/domain/test'
 import MockDate from 'mockdate'
@@ -74,6 +74,6 @@ describe('AddSurvey Controller', () => {
   test('Should return 204 on success', async () => {
     const { sut } = makeSut()
     const httpResponse = await sut.handle(mockRequest())
-    expect(httpResponse).toEqual(noContent())
+    expect(httpResponse).toEqual(ok(httpResponse.body))
   })
 })
