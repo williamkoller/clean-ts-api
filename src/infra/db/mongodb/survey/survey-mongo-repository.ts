@@ -9,7 +9,8 @@ import { ObjectId } from 'mongodb'
 export class SurveyMongoRepository implements AddSurveyRepository, LoadSurveysRepository, LoadSurveyByIdRepository {
   async add (data: AddSurveyParams): Promise<void> {
     const surveyCollection = await MongoHelper.getCollection('surveys')
-    await surveyCollection.insertOne(data)
+    const addSurveys = await surveyCollection.insertOne(data)
+    return addSurveys && MongoHelper.map(addSurveys.ops[0])
   }
 
   async loadAll (accountId: string): Promise<SurveyModel[]> {
