@@ -5,3 +5,4 @@ data
 !src/data
 .vscode
 globalConfig.json
+package-lock.json
