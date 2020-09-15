@@ -8,8 +8,11 @@
     "rootDir": "src",
     "baseUrl": "src",
     "paths": {
-      "@/*": ["*"]
-    }
+      "@/*": [
+        "*"
+      ]
+    },
+    "skipLibCheck": true
   },
   "include": [
     "src"
