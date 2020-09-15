@@ -4,6 +4,7 @@
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/williamkoller/clean-ts-api)
+[![time tracker](https://wakatime.com/badge/github/williamkoller/clean-ts-api.svg)](https://wakatime.com/badge/github/williamkoller/clean-ts-api)
 
 
 # **Clean Node API**
