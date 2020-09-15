@@ -8,7 +8,7 @@
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "postbuild": "copyfiles -u 1 public/**/* dist/static",
     "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/main/server.js",
-    "up": "npm run build && docker-compose up -d",
+    "up": "npm run build && docker-compose up --remove-orphans",
     "down": "docker-compose down",
     "check": "npm-check -s -u",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
