@@ -73,7 +73,7 @@ describe('Survey Routes', () => {
             aswer: 'Answer 2'
           }]
         })
-        .expect(204)
+        .expect(200)
     })
   })
 
